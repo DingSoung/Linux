@@ -1,5 +1,10 @@
 ###Qiuck Start
 Open the START.html in BBB(Beaglebone-Black) portable drive and folow the step to install drives
+or access BBB via ssh
+
+    ssh 192.168.7.2 -l root
+
+
 
 ###serial ports
 BBB has USART serial and simulated portable drive on USB,thanks to the BBB developers, they are very easy to use, if you dont mind the performanct and not need full boot information .ect, it's nice demo. you neet some tool to access the virtual serial port on windows linux£, such xshell minicom,Mac user  command below.
