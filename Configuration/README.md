@@ -13,7 +13,7 @@ Config PC Internel to share the network to BBB, you also can assign exactly ip t
 	echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 	ping www.google.com
 
-###Config Git
+###Git/Github
 Config a git enviroument [Openwrt][2],[OctoPrint][3]
 
 	opkg update	opkg upgrade
