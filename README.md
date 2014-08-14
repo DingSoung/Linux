@@ -18,3 +18,36 @@ BBB的USB还将网卡通过USB链接起来，所以PC可以通过USB,将网络�
 	opkg install git, opkg install python python-modules python-pyserial python-numpy python-setuptools python-misc python-pip git
 	git config --global
 	git clone https://github.com/DingSoung/AM335x.git
+	git push
+EMMC空间有限,好在基本的环境还算完善，配置内核编译环境,下载内核源文件，直接连接编译就可以了，参考http://www.devba.com/index.php/archives/3916.html
+	opkg update
+	opkg install kernel-headers
+	opkg install kernel-dev
+	cd /usr/src/kernel
+	make scripts
+
+testKernelMod.c
+
+	#include <linux/module.h>
+	#include <linux/kernel.h>
+	static int __init enable_usermode(void)
+	{
+		printk(KERN_INFO "testKernelModenabled.\n");
+		return 0;
+	}
+	static void __exit disable_usermode(void)
+	{
+		printk(KERN_INFO "Usermode disabled.\n");
+	}
+	module_init(enable_usermode);
+	module_exit(disable_usermode);
+
+Makefile
+
+	obj-m += testKernelMod.o
+	KDIR = /usr/src/kernel
+	PWD := $(shell pwd)
+	all:
+        	make -C $(KDIR) M=$(PWD) ARCH=arm modules
+	clean:
+        	make -C $(KDIR) M=$(PWD) ARCH=arm clean
