@@ -19,7 +19,8 @@ BBB的USB还将网卡通过USB链接起来，所以PC可以通过USB,将网络�
 	git config --global
 	git clone https://github.com/DingSoung/AM335x.git
 	git push
-EMMC空间有限,好在基本的环境还算完善，配置内核编译环境,下载内核源文件，直接连接编译就可以了，参考http://www.devba.com/index.php/archives/3916.html
+EMMC空间有限,好在基本的环境还算完善，配置内核编译环境,下载内核源文件，直接连接编译就可以了，参考http://elene.dahners.com/blog/2012/10/22/compiling-a-kernel-module-for-beaglebone/ 和
+http://elinux.org/EBC_Exercise_08_Installing_Development_Tools#Download_and_Compile_the_Kernel
 
 	opkg update
 	opkg install kernel-headers
