@@ -11,20 +11,21 @@ BBB的USB还将网卡通过USB链接起来，所以PC可以通过USB,将网络�
 	route add default gw 192.168.7.1  
 	/etc/resolv.conf -> nameserver 8.8.8.8
 
-###系统环境
-默认系统Anstrom还是很完整的，但是与Debian有区别。更新系统主要有opkg，更多信息http://wiki.openwrt.org/doc/techref/opkg，
+###开发环境
+默认系统Angstrom还是很完整的，但是与Debian有区别。更新系统主要有opkg，更多信息http://wiki.openwrt.org/doc/techref/opkg，
 
 	opkg update
-	opkg install git, opkg install python python-modules python-pyserial python-numpy python-setuptools python-misc python-pip git
+	opkg upgrade
+	opkg install git
 	git config --global
 	git clone https://github.com/DingSoung/AM335x.git
 	git push
 EMMC空间有限,好在基本的环境还算完善，配置内核编译环境,下载内核源文件，直接连接编译就可以了，参考http://elene.dahners.com/blog/2012/10/22/compiling-a-kernel-module-for-beaglebone/ 和
 http://elinux.org/EBC_Exercise_08_Installing_Development_Tools#Download_and_Compile_the_Kernel
-
-	opkg update
-	opkg install kernel-headers
-	opkg install kernel-dev
+	
+	opkg install kernel-headers kernel-dev
 	cd /usr/src/kernel
+	make config ;use default chooises
+	or make menuconfig
 	make scripts
 
