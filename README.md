@@ -12,16 +12,15 @@ BBB的USB还将网卡通过USB链接起来，所以PC可以通过USB,将网络�
 	/etc/resolv.conf -> nameserver 8.8.8.8
 
 ###开发环境
-默认系统Angstrom还是很完整的，但是与Debian有区别。更新系统主要有opkg，更多信息http://wiki.openwrt.org/doc/techref/opkg，
+默认系统Angstrom还是很完整的，但是与Debian有区别。更新系统主要有opkg，更多信息[Openwrt][1],参考[OctoPrint][2]
 
 	opkg update
 	opkg upgrade
 	opkg install git
-	git config --global
+	git config --global http.sslverify false
 	git clone https://github.com/DingSoung/AM335x.git
 	git push
-EMMC空间有限,好在基本的环境还算完善，配置内核编译环境,下载内核源文件，直接连接编译就可以了，参考http://elene.dahners.com/blog/2012/10/22/compiling-a-kernel-module-for-beaglebone/ 和
-http://elinux.org/EBC_Exercise_08_Installing_Development_Tools#Download_and_Compile_the_Kernel
+EMMC空间有限,好在基本的环境还算完善，配置内核编译环境,下载内核源文件，直接连接编译就可以了，参考[Elen][3] 和 [elinux][4]
 	
 	opkg install kernel-headers kernel-dev
 	cd /usr/src/kernel
@@ -29,3 +28,7 @@ http://elinux.org/EBC_Exercise_08_Installing_Development_Tools#Download_and_Comp
 	or make menuconfig
 	make scripts
 
+[1]: http://wiki.openwrt.org/doc/techref/opkg
+[2]: https://github.com/foosel/OctoPrint/wiki/Setup-on-BeagleBone-Black-running-%C3%85ngstr%C3%B6m
+[3]: http://elene.dahners.com/blog/2012/10/22/compiling-a-kernel-module-for-beaglebone/
+[4]: http://elinux.org/EBC_Exercise_08_Installing_Development_Tools#Download_and_Compile_the_Kernel
