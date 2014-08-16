@@ -1,8 +1,13 @@
+###Qiuck Start
+Open the START.html in BBB(Beaglebone-Black) portable drive and folow the step to install drives
+
 ###serial ports
 关于USB调试串口什么的，其实是内部调用硬件，结合软件虚拟出来的可移动存储、串口等设备，PC安装好驱动程序，Msater串口可以直接接在BBB硬件上，本地串口客户端直接连接在虚拟的串口是调试。所以如果要真正的开发，不依赖他们的系统，还是得上串口Jtag等等，只能说人家已经开发的很好了，如果不嫌效率低，浪费资源，还是可以拿来学习和使用的
+	
+	screen /dev/cu.usbserial 9600
 
 ###access Internel
-BBB的USB还将网卡通过USB链接起来，所以PC可以通过USB,将网络共享给BBB,需要本地PC分配ip,给BBB配置DNS
+Config PC Internel, share the network to BBB, you also can assign exactly ip to BBB, config default ip DNS in  BBB
 	
 	/*config router ip 192.168.7.1 for BBB*/
 	route add default gw 192.168.7.1  
