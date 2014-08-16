@@ -7,11 +7,11 @@ Open the START.html in BBB(Beaglebone-Black) portable drive and folow the step t
 	screen /dev/cu.usbserial 9600
 
 ###access Internel
-Config PC Internel, share the network to BBB, you also can assign exactly ip to BBB, config default ip DNS in  BBB
+Config PC Internel to share the network to BBB, you also can assign exactly ip to BBB, config default ip DNS in  BBB, ifconfig get ipv4 address, ex 192.168.7.1,use command below config BBB
 	
-	/*config router ip 192.168.7.1 for BBB*/
 	route add default gw 192.168.7.1  
 	/etc/resolv.conf -> nameserver 8.8.8.8
+	ping www.google.com
 
 ###Config Git
 默认系统Angstrom还是很完整的，但是与Debian有区别。更新系统主要有opkg，更多信息[Openwrt][1],参考[OctoPrint][2]
