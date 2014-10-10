@@ -5,5 +5,5 @@ while read Line
 do
 	echo $Line >> /etc/hosts
 	echo $Line
-done < hosts
+done < imouto.host
 
