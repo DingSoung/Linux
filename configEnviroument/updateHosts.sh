@@ -1,5 +1,5 @@
 #! /bin/sh
-git clone https://gist.github.com/5f00ad4e7fa8006c8dde.git ~/hosts
+git clone https://github.com/zxdrive/imouto.host.git
 cd ~/hosts
 while read Line
 do
