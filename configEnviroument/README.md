@@ -31,6 +31,7 @@ Config a git enviroument [Openwrt][2],[OctoPrint][3]
 	fdisk mmcbk1
 	m
 	#...
+	mount /dev/mmcblk1p1 ~/
 	
 ####the go on
 setup system time, config enviroument for programming, etc
