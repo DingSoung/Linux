@@ -25,6 +25,13 @@ Config a git enviroument [Openwrt][2],[OctoPrint][3]
 	git clone https://github.com/DingSoung/AM335x.git
 	git push
 
+####part TF card and format
+
+	fdisk -l
+	fdisk mmcbk1
+	m
+	#...
+	
 ####the go on
 setup system time, config enviroument for programming, etc
 
