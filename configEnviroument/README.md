@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿###Qiuck Start
+=======
 ####Qiuck Start
+>>>>>>> origin/master
 Open the START.html in BBB(Beaglebone-Black) portable drive and folow the step to install drives
 or access BBB via ssh
 
@@ -16,12 +20,24 @@ Config PC Internel to share the network to BBB, you also can assign exactly ip t
 	echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 	ping www.google.com
 
+<<<<<<< HEAD
+when netwok ok, can access bbb via ssh
+
+	ssh root@192.168.7.2
+
+###Git/Github
+=======
 ####Git/Github
+>>>>>>> origin/master
 Config a git enviroument [Openwrt][2],[OctoPrint][3]
 
 	opkg update	opkg upgrade
 	opkg install git
-	git config --global http.sslverify false
+	git config --global user.name "Ding Soung"
+	git config --global user.email DingSoung@gmail.com
+	git config --global http.sslVerify true
+	git config --global http.sslCAinfo /etc/ssl/certs/ca-certificates.crt
+	git config --global http.sslCApath /etc/ssl/certs/ca-certificates.crt
 	git clone https://github.com/DingSoung/AM335x.git
 	git push
 
