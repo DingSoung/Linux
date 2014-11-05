@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿###Qiuck Start
-=======
-####Qiuck Start
->>>>>>> origin/master
+﻿####Qiuck Start
 Open the START.html in BBB(Beaglebone-Black) portable drive and folow the step to install drives
 or access BBB via ssh
 
@@ -20,15 +16,11 @@ Config PC Internel to share the network to BBB, you also can assign exactly ip t
 	echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 	ping www.google.com
 
-<<<<<<< HEAD
 when netwok ok, can access bbb via ssh
 
 	ssh root@192.168.7.2
 
-###Git/Github
-=======
 ####Git/Github
->>>>>>> origin/master
 Config a git enviroument [Openwrt][2],[OctoPrint][3]
 
 	opkg update	opkg upgrade
@@ -53,5 +45,5 @@ Config a git enviroument [Openwrt][2],[OctoPrint][3]
 setup system time, config enviroument for programming, etc
 
 [1]: http://derekmolloy.ie/beaglebone/getting-started-usb-network-adapter-on-the-beaglebone
-[2]:http://wiki.openwrt.org/doc/techref/opkg
+[2]: http://wiki.openwrt.org/doc/techref/opkg
 [3]: https://github.com/foosel/OctoPrint/wiki/Setup-on-BeagleBone-Black-running-%C3%85ngstr%C3%B6m
