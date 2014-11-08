@@ -1,9 +1,9 @@
 #! /bin/sh
-git clone https://github.com/zxdrive/imouto.host.git hosts
-cd hosts
+git clone git@github.com:DingSoung/hosts.git ~/hosts
+rm /etc/hosts
 while read Line
 do
 	echo $Line >> /etc/hosts
 	echo $Line
-done < imouto.host
+done < ~/hosts/hosts
 
