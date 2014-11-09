@@ -7,10 +7,15 @@ eMMC space is very limited, and full linux kernel file is not very needed, refer
 	or make menuconfig
 	make scripts
 
-####
+####official srouce
+it highly suggest plus tf card >= 8G, format and mount is,cd the flore
 
 	git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
+	make menuconfig
+	make
 	
+it will take a long long time,just wait
+
 ####combie kernel mode
 write your kernel mode c and Makefile, combien with kernel src file
 
