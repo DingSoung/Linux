@@ -41,6 +41,20 @@ Config a git enviroument [Openwrt][2],[OctoPrint][3]
 	#...
 	mount /dev/mmcblk1p1 ~/
 	
+####boot form eMMC when tf_card pluged
+because bootloader recognise the eMMC as MMC1 and tf_card as MMC0 when tf card pluged, so need tell bootloader boot form "MMC1"
+
+	fdisk /dev/mmcblk1
+	mkfs -t vfat -F 16 -n boot /dev/mmcblk1p1
+	mkfs -V -t ext4 -j -L data /dev/mmcblk1p2
+
+make a file "uEnv.txt" in first partion like this
+
+	mmcdev=1
+	bootpart=1:2
+	mmcroot=/dev/mmcblk1p2 ro
+	optargs=quiet
+
 ####the go on
 setup system time, config enviroument for programming, etc
 
