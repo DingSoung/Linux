@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 
 echo "安装Apache2"
 yum install httpd
