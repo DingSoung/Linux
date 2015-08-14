@@ -23,6 +23,9 @@ echo "LAMP自启动"
 chkconfig --levels 2345 httpd on
 chkconfig --levels 2345 mysqld on
 
+rm /var/www/html/info.php
+echo "<?php phpinfo(); ?>" > /var/www/html/info.php
+echo "浏览器访问ip/info.php"
 
 echo "
 LAMP安装完成
