@@ -1,12 +1,12 @@
 #Note
 all note and some test code about am335x linux base on beaglebone black 
 
-####[BeagleBone Black](https://github.com/DingSoung/Linux/blob/master/BeagleBoneBlack)
+#### [BeagleBone Black](BeagleBoneBlack/)
 some shell amd command format to quitkly config enviroument, include serial prot, access internel , config git, install Google Github Facebook Hosts IP
 
-####[Android](https://github.com/DingSoung/Linux/blob/master/Android)
+#### [Android](/Android)
 
-####[Kernel](https://github.com/DingSoung/Linux/blob/master/Kernel)
+#### [Kernel](/Kernel)
 kernel mode design note and some code
 
-####[Programming](https://github.com/DingSoung/Linux/blob/master/C/C++)
+#### [Programming](/C/C++)
