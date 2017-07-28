@@ -11,6 +11,8 @@ yum install mysql mysql-server
 yum install php
 yum install php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc
 
+mount -B ./conf.d /etc/nginx/conf.d/
+
 chkconfig nginx on
 nginx
 nginx -s reload
