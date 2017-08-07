@@ -6,7 +6,7 @@ service mysqld start
 service mysqld status
 
 # mount nginx config and html
-mount -B ./conf.d /etc/nginx/conf.d/
+mount -B ../Nginx/conf.d /etc/nginx/conf.d/
 mount -B ~/html /usr/share/nginx/html
 
 # add permison for nginx
