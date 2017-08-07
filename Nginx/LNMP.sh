@@ -16,3 +16,5 @@ mount -B ./conf.d /etc/nginx/conf.d/
 chkconfig nginx on
 nginx
 nginx -s reload
+
+chmod o+x ~/
