@@ -11,6 +11,7 @@ chkconfig nginx on
 systemctl enable nginx  
 
 # restart nginx
+#systemctl restart nginx
 fuser -k 80/tcp
 nginx
 nginx -s reload
