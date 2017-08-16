@@ -14,5 +14,3 @@ systemctl start mysqld
 systemctl enable mysqld
 service mysqld status
 
-# set mySQL passwd
-mysql_secure_installation
