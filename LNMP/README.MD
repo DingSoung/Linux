@@ -1,12 +1,29 @@
+# LNMP
 
-# mount nginx config
+LNMP = Linux + Nginx + mySQL + PHP
+
+another LNAMP, A = Apache, httpd used in embedded system
+
+# nginx
+
+default config `/etc/nginx/nginx.conf`
+
+add server to `/etc/nginx/conf.d/`
+
+### mount nginx config
+
 ```shell
 $ umount /etc/nginx/conf.d/
 $ mount -B ./conf.d /etc/nginx/conf.d/
 $ nginx -s reload
 ```
 
+# php
+
+default config `/etc/php-fpm.d/www.conf `
+
 #mysql
+
 ### show random password generated after install
 ```shell
 $ grep 'temporary password' /var/log/mysqld.log
