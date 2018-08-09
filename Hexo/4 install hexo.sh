@@ -1,8 +1,5 @@
 #!/bin/sh
-clear 
-
-# install hexo
-nvm install stable
+clear
 
 # instiall hexo via npm
 npm install -g hexo-cli
