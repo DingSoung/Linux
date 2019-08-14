@@ -1,0 +1,14 @@
+{
+       	"bridge": {
+		"name": "yeelight",
+		"username": "04:CF:8C:9B:67:F4",
+		"port": 51825,
+		"pin": "004-89-674"
+	},
+	"platforms": [
+		{
+			"platform" : "yeelight",
+			"name" : "yeelight"
+		}
+	]
+}
